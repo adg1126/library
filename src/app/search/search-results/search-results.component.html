@@ -1,0 +1,12 @@
+<div class="container" *ngIf="books">
+  <div class="book" *ngFor="let book of books">
+    <img [src]="book.volumeInfo.imageLinks.smallThumbnail" alt="" />
+    <div class="title">{{ book.volumeInfo.title }}</div>
+    <div class="author">by {{ book.volumeInfo.authors }}</div>
+    <div class="buttons">
+      <button (click)="addBook(book.volumeInfo)" class="ui primary button">
+        Add to Books
+      </button>
+    </div>
+  </div>
+</div>

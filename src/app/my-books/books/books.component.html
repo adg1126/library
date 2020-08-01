@@ -1,0 +1,38 @@
+<div class="container">
+  <ng-container *ngIf="books">
+    <div class="book" *ngFor="let book of books">
+      <img [src]="book.image" alt="" />
+      <div class="book-info">
+        <div class="title">{{ book.title }}</div>
+        <div class="author">by {{ book.author }}</div>
+        <div *ngIf="book.status" class="status">Status: {{ book.status }}</div>
+      </div>
+      <div class="mark-as">
+        Mark as:
+        <div>
+          <div class="ui buttons">
+            <button (click)="markAsUnread($event, book)" class="ui button">
+              Unread
+            </button>
+            <div class="or"></div>
+            <button
+              (click)="markAsRead($event, book)"
+              class="ui positive button"
+            >
+              Read
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="remove">
+        <button (click)="deleteBook($event, book)" class="ui secondary button">
+          Remove
+        </button>
+      </div>
+    </div>
+  </ng-container>
+
+  <div *ngIf="!books">
+    <h5>There are no books</h5>
+  </div>
+</div>

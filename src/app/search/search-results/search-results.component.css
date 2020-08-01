@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 0.5em;
+}
+
+.book {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 38% 62%;
+  grid-template-rows: 25% 20% 55%;
+}
+
+.title {
+  height: 1.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.author {
+  grid-column: 2/3;
+}
+
+.buttons {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}

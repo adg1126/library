@@ -1,0 +1,13 @@
+<div class="item">
+  <form
+    (submit)="onFormSubmit($event)"
+    class="ui inverted transparent icon input"
+  >
+    <input
+      type="text"
+      (input)="term = $event.target.value"
+      placeholder="Search for a title or an author"
+    />
+    <i class="search icon"></i>
+  </form>
+</div>
