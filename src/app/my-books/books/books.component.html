@@ -33,6 +33,10 @@
   </ng-container>
 
   <div *ngIf="!books">
+    <h5>Loading books</h5>
+  </div>
+
+  <div *ngIf="!books.length">
     <h5>There are no books</h5>
   </div>
 </div>
